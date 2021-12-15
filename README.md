@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Basic Project template
+This is a starting project set up with rails 6 api back end and react front end.
 
-Things you may want to cover:
+## Included: 
+- devise_token_auth
+- faker
+- pry rails
+- axios
+- react-router-dom
+- styled-components
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Set up instructions:
