@@ -10,5 +10,6 @@ This is a starting project set up with rails 6 api back end and react front end.
 - axios
 - react-router-dom
 - styled-components
+- devise-axios
 
 ## Set up instructions:
