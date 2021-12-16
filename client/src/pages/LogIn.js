@@ -10,8 +10,9 @@ const LogIn = () => {
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleLogin({ email, password }, navigate);
     };
 
     const toggleShow = () => {
@@ -21,7 +22,7 @@ const LogIn = () => {
     return (
         <div>
             <h1>Log In Page</h1>
-            <form>
+            <form onSubmit={handleSubmit} >
                 <label>Email:</label>
                 <input value={email} onChange={(e)=>setEmail(e.target.value)} />
                 <label>Password:</label>

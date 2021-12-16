@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export const AuthContext = React.createContext();
 // only need the AuthContext as we will use the useContext hook
@@ -15,10 +16,17 @@ const AuthProvider = (props) => {
         // setUser in ui 
     };
 
-    const handleLogin = () => {
+    const handleLogin = async (user, navigate) => {
         // axios call to log in user
-        // setUser
-        setUser({email: "dummy"});
+        try {
+            let res = await axios.post("/api/auth/sign_in", user);
+            console.log(res.data);
+            setUser(res.data.data);
+            navigate("/");
+        } catch (err) {
+            console.log(err.response);
+            alert("An error occurred logging in");
+        }
     };
 
     const handleLogout = () => {
