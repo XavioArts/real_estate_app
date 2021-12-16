@@ -11,9 +11,9 @@ const Home = () => {
         <div>
             <h1>Home</h1>
             {JSON.stringify(auth)}
-            <button onClick={auth.handleLogin} >Log In</button>
+            <button onClick={()=>navigate("/login")} >Log In</button>
             <button onClick={auth.handleLogout} >Log Out</button>
-            <button onClick={navigate("/protected")}>User View</button>
+            <button onClick={()=>navigate("/protected")}>User View</button>
         </div>
     );
 };
