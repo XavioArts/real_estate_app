@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Public from './pages/Public';
 import Protected from './pages/Protected';
 import NavBar from './components/NavBar';
+import RequireAuth from './components/RequireAuth';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/public" element={<Public/>} />
-        <Route path="/protected" element={<Protected/>} />
+        <Route element={<RequireAuth/>} >
+          <Route path="/protected" element={<Protected/>} />
+        </Route>
       </Routes>
     </div>
   );
