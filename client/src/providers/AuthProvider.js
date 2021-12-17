@@ -11,9 +11,16 @@ const AuthProvider = (props) => {
     // The user state will keep track of the user that is logged in
     // We initialize the state as null, which is a user that is not logged in
 
-    const handleRegister = () => {
+    const handleRegister = async (user, navigate) => {
         // axios call to register new user
-        // setUser in ui 
+        try {
+            let res = await axios.post("/api/auth", user);
+            setUser(res.data.data);
+            navigate("/");
+        } catch (err) {
+            console.log(err.response);
+            alert("An error occurred registering user");
+        }
     };
 
     const handleLogin = async (user, navigate) => {
@@ -29,9 +36,17 @@ const AuthProvider = (props) => {
         }
     };
 
-    const handleLogout = () => {
+    const handleLogout = async (navigate) => {
         // axios call to log out
-        setUser(null);
+        try {
+            let res = await axios.delete("/api/auth/sign_out");
+            console.log(res);
+            setUser(null);
+            navigate("/");
+        } catch (err) {
+            console.log(err.response);
+            alert("an error occurred logging out");
+        }
     };
 
     return (
