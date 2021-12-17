@@ -37,6 +37,11 @@ This is a starting project set up with rails 6 api back end and react front end.
 ```
     yarn
 ```
+- then remove the git remote
+```
+    git remote rm origin
+```
+- add new git remote
 - DONE
 
 - To run the servers
