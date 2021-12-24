@@ -37,6 +37,11 @@ This is a starting project set up with rails 6 api back end and react front end.
 ```
     yarn
 ```
+- then remove the git remote
+```
+    git remote rm origin
+```
+- add new git remote
 - DONE
 
 - To run the servers
@@ -47,6 +52,7 @@ This is a starting project set up with rails 6 api back end and react front end.
 
 ## Adding 3rd party libraries
 
+#### Semantic
 - to add Semantic
 ```
     yarn add semantic-ui-react semantic-ui-css
@@ -67,6 +73,7 @@ OR in index.html
         ...
 ```
 
+#### MaterialUI
 - to add MaterialUI
 ```
     yarn add @mui/material @emotion/react @emotion/styled
@@ -91,6 +98,7 @@ in index.html
     />
 ```
 
+#### AntD
 - to add AntDesign
 ```
     yarn add antd
